@@ -12,9 +12,9 @@ class Character(Card):
     def __init__(self,name,type,level,cost,color,trigger,power,soul,tab):
         self._power=power
         self._soul=soul
-        self._tab=tab
+        self._tab=tab #Stand/Rest/Die
         super().__init__(name,type,level,cost,color,trigger)
-
+        
 class Event(Card):
     def __init__(self,name,type,level,cost,color,trigger):
         super().__init__(name,type,level,cost,color,trigger)
@@ -22,4 +22,5 @@ class Event(Card):
 class Climax(Card):
     def __init__(self,name,type,level,cost,color,trigger):
         super().__init__(name,type,level,cost,color,trigger)
+
 
