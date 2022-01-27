@@ -51,7 +51,7 @@ def Game_Start():
                 else:
                     player.front_stage[x].tab="Stand"
     #draw_phase
-    Draw_card(player)
+    Draw_card(player,True)
     #clock_phase
     choice_hand_index=0
     Clock_draw(player,choice_hand_index)
@@ -60,19 +60,20 @@ def Game_Start():
     Chara_set(where,card)
 
     #climax_phase
-
-def Draw_card(player):
+    
+def Draw_card(player,damage_check):
     top_card=player.deck[0]
     player.hand.append(top_card)
     del player.deck[0]
     Refresh_deck(player)
-    Refresh_damage(player)
+    if damage_check:
+        Refresh_damage(player)
 def Clock_draw(player,choice_hand_index):
     player.clock_area.append(player.hand[choice_hand_index])
     Level_Up(player)
     del player.hand[choice_hand_index]
-    for x in range(0,2):
-        Draw_card(player)
+    Draw_card(player,False)
+    Draw_card(player,True)
 
 def Deck_Suffle(player):
     random.shuffle(player.deck)
@@ -108,4 +109,9 @@ def choice_level_zone_card(player):
 def Game_end():
     print("game end")
 
+def Chara_set(where,card):
 
+
+def Chara_Attack()
+
+def Chara_
