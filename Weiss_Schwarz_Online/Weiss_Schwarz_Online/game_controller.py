@@ -57,7 +57,7 @@ def Game_Start():
     Clock_draw(player,choice_hand_index)
 
     #main_phase
-    Chara_set(where,card)
+    Chara_set(player,where,card)
 
     #climax_phase
     
@@ -109,8 +109,8 @@ def choice_level_zone_card(player):
 def Game_end():
     print("game end")
 
-def Chara_set(where,card):
-
+def Chara_set(player,where,card):
+    player.
 
 def Chara_Attack()
 
