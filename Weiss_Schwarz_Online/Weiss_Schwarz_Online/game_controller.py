@@ -61,6 +61,9 @@ def Game_Start():
 
     #climax_phase
     
+    #battle_phase
+
+    #
 def Draw_card(player,damage_check):
     top_card=player.deck[0]
     player.hand.append(top_card)
@@ -110,7 +113,12 @@ def Game_end():
     print("game end")
 
 def Chara_set(player,where,card):
-    player.
+    if where[0]:
+        player.front_stage[where[1]]=card;
+        player.front_stage_count+=1
+    else:
+        player.rear_stage[where[1]]=card;
+        player.rear_stage_count+=1
 
 def Chara_Attack()
 
